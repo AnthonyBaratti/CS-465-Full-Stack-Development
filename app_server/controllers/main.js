@@ -4,8 +4,6 @@
 // SNHU CS-465 FSD I
 // Professor T. Butler
 //
-// The purpose of this application is to:
-//
 ///////////////////////////////
 
 /* GET Homepage */
