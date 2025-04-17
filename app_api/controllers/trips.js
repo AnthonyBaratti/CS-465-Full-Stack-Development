@@ -124,9 +124,28 @@ const tripsUpdateTrip = async(req, res) => {
         // console.log(q); 
 }; 
 
+const tripsDeleteTrip = async (req, res) => {
+    try {
+        const result = await Model.findOneAndDelete({code: req.params.tripCode})
+        .exec();
+
+        if (!result) {
+            return res.status(404).json({ message: `Trip with code ${req.params.tripCode} not found.` });
+        }
+
+        return res.status(200).json({ message: `Trip ${req.params.tripCode} successfully deleted.` });
+    } 
+    catch (err) {
+        console.error('Error deleting trip:', err);
+        return res.status(500).json({ error: 'Internal server error while deleting trip.' });
+    }
+};
+
+
 module.exports = {
     tripsList,
     tripsFindByCode, // additional endpoint
     tripsAddTrip,
-    tripsUpdateTrip
+    tripsUpdateTrip,
+    tripsDeleteTrip
 };

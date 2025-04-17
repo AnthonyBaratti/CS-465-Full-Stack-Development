@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { trips } from '../data/trips';
 import { TripCardComponent } from '../trip-card/trip-card.component';
-
-import { Trip } from '../models/trip';
 import { TripDataService } from '../services/trip-data.service';
-
 import { Router } from '@angular/router';
 
 
@@ -18,8 +16,7 @@ import { Router } from '@angular/router';
 })
 
 export class TripListingComponent implements OnInit {
-
-  trips!: Trip[]
+  trips: Array<any>=trips;
   message: string = '';
 
   constructor (
@@ -32,6 +29,12 @@ export class TripListingComponent implements OnInit {
   public addTrip(): void {
     this.router.navigate(['add-trip']);
   }
+
+  public deleteTrip(): void {
+    this.router.navigate(['delete-trip']);
+  }
+
+
   private getStuff(): void { 
     this.tripDataService.getTrips() 
     .subscribe({

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TripListingComponent } from './trip-listing/trip-listing.component';
-import {RouterModule} from '@angular/router'; //Added to remove Error that
+import {RouterOutlet} from '@angular/router'; //Added to remove Error that
 //Preventing me from launching the localhost:4200 with error
 //X [ERROR] NG8001: 'router-outlet' is not a known element:
 //##FIXME Investigate why this happened, it also changed the layout 
@@ -9,7 +9,8 @@ import {RouterModule} from '@angular/router'; //Added to remove Error that
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, TripListingComponent, RouterModule],
+  standalone: true,
+  imports: [CommonModule, TripListingComponent, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
