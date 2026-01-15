@@ -1,32 +1,56 @@
-# CS-465-Full-Stack-Development
-CS-465 Full Stack Development with MEAN
+# Travlr-Getaways - Full-Stack MEAN Web Application
+A web application built with a focus on developing front-end user interface and a back-end administrator interface connected through MongoDB.<br><br>
+
+## Table of Contents
+- [Overview](#overview)
+- [Technologies](#technologies)
+- [Features](#features)
+- [Skills/Concepts](#skills-&-concepts)
+- [Example Evidence](#examples)
+- [Reflection](#reflection)
 
 
-## Architecture
-The front-end web development was used with HTML formatting. Building each page used a template, written in HTML and using Express to deliver content to the webpage. 
-The HTML basically formats the information that will delivered by NodeJS, using express as the framework to deliver static interactive content. Node is coded with JavaScript,
-and acts as the controller between the model, database, and the view (HTML). Java script builds paths (url endpoints), and hands them off to the application to direct the flow of information
-between pages and click listeners. The data is sent to and received from these paths (such as api/trips, which is delivered the trips collection to be formatted and presented in the view). It
-can also be retrieved from these paths and passed to other parts of the program (such as /trips/tripCode, which returns a specific trip).
+## Overview
+- Full-stack web application demonstrating integration between frontend UI, backend API, and database
+- Provides a real-world example of managing dynamic content instead of relying on static web pages
+- Includes an authenticated admin interface for securely managing travel listings
+- Demonstrates how backend changes immediately reflect in the user-facing frontend
+- Showcases practical implementation of REST APIs, authentication, and persistent data storage
+- Showcases use of professional development tools such as MongoDB Compass, Postman, and Github
 
-Meanwhile, the single-page application (SPA) that was built for the administrative purpose used a bootstrap for formatting the HTML. This allows a pleasant way of viewing the
-features of control over the webpage (such as CRUD operations to trips). Angular was used to deliver a dynamic webpage, which consistently ran, awaiting to receive and deliver information.
-It used a component-based, modular structure written in TypeScript, and relied on services, routers, and two-way databinding techniques to deliver content dynamically (upon click).
+## Technologies
+- Node.js for server-side runtime
+- Express.js for backend routing and API development
+- MongodDB for data persistence
+- Mongoose for schema modeling and database interaction
+- Angular for the admin single-page application (SPA)
+- HTML, CSS, and JavaScript for client-facing UI
+- JSON Web Tokens (JWT) for authentication and protected routes
+- Postman for API testing and validation
+- MongoDB Compass for database inspection and verification
+- Git and GitHub for version control and project management
 
-A NoSQL database was used because they offer a very flexible schema for data, which can be easily scaled without much (if any) restructuring. Furthermore, data-type variation is allowed in
-NoSQL, meaning the data stored doesn't have to be structured (or can be loosely structured). Using a non-relational database is handy when data types are changing, different, or unknown.
+## Features
+- RESTful API supporting full CRUD operations (Create, Read, Update, Delete)
+- Secure authentication system using JWT
+- Protected API routes that require valid tokens
+- Angular-based admin dsashboard for managing travel listings
+- Dynamic front-end updates reflecting backend data changes
+- Persistant storage using MongoDB
+- Separation of concerns across frontend, API, and database layers
+- Environment-based configuration using .env for security
 
-## Functionality
-While JavaScript delivers the data from the back-end to the front-end, JSON is what formats the data and allows it to be uniformally processed or parsed. JSON is essentially how data
-objects are stored. It generally is build with key value pairs, but can also hold lists, sub keys and sub values, and can be built with different types of data (such as arrays or boolean values).
-JavaScript delivers these JSON "objects" and formats them appropriately to the design of the web application. JSON is perfect for storing data because it is relatively easy to query as well.
+## Skills & Concepts
+- Ability to design and implement a full-stack architecture
+- Understanding of backend API design and routing
+- Experience working with databases and schema models
+- Knowledge of authentication and secure application practices
+- Ability to debug real-world issues (environment variables, Node errors, dependency conflicts, etc)
+- Comfort working with professional developer tools
+- Ability to connect multiple systems (frontend, backend, database) into a cohesive application
 
-Refactoring code is an important step for reusability and scalability. A specific instance in the fullstack developement was building the view of trips. It was initially built with each
-individual trip formatting their data types (such as location, stay, price per person, description, ect.). So coding each destination had to be done for _each_ trip. With only 3 trips, that is surely fine. But when the trips grow in number, or change often (even simple details, let alone whole trips coming and going), the demand for attention grows incredibly. Instead, HandleBars was used to format each trip and then use a _for each_ loop within HTML. This can allow one line of code to process each member of the object and iterate each object (for example, this.name for each object). The benefits here are that information can be stored, removed, or recycled (rather than deleted or rebuilt).
-Another interesting scenario occured with wrapping methods. For example, building an updateTrips method, and then wrapping it with a getUser method to ensure that the user was checked for privelege before accessing the update method. Instead of checkingin the method, a callback function was created to recall the method once the user was validated.
-
-## Testing
-During the testing of the Full Stack Application, Postman and MongoDB Compass were used. Compass was used to check the collections after making requests to them (such as adding a trip, adding a user) and to see that they were formatted accordingly. It was essentially a monitoring device. Postman was where the true testing came in. Once CRUD methods were built and wired up, we could use Postman to create the calls (POST, GET, DELETE, & PUT) to the appropriate API endpoints (such as /api/trips/:tripCode). For example, if we wanted to test that our PUT method can update the name of a trip, we design a test that maps the key value pair name : 'Name' and use the PUT command to api/trips/:tripCode. In this case, we also have to supply the trip code so it can find the specific trip with another key value pair. When it came to testing security, when a Jsonwebtoken was generated for a user, we could find the token, attach it as a bearer, which will give clearance to the user for running test commands. If we tried to implement a test without the JWT, the test would fail and it would return us an error that we told it to (such as token not found or user not authorized). This way, we not only test that the CRUD operations are working, but that the user validation and JWT exist as well. On another note, we also used jwt.io to verify that our token existed as it should, revealing the information of the user it was securing.
+## Examples
+####
 
 ## Reflection
-Full stack development with MEAN is a valuable commodity. It allows for management from database, front-end, and back-end services all rolled into one. During this project, I have sharpened my skills with MongoDB and NoSQL, including ways to test it's functionality. I have increased my knowledge and use of HTML formatting, and learned how Angular and Express work to deliver and receive data and requests to and from both ends of developement. I think this adds one more tool into the belt of tools that allow developers to be versatile and knowledgeable across multiple faucets. It has refined my skills of refactoring code to make it more readable, make it easier to maintain, and allow it to do more with less. It has shown me how to save time and resources while still providing a dynamic and enjoyable user experience. It has also helped me understand and implement the importance of security, such as hashing, salting, and JWTs. It has broadened my view of what developement in the real world looks like, not just data managing and simple application building. It has also allowed me to see the value of high level down to detailed planning, as can be seen in the specific diagrams within the software design document. Connecting all the pieces and using the diagrams as a road map to design a robust, responsive, resourceful application that functions securely and accurately. Having a broad knowledge and overview of these critical real-world developing mechanics allows a more diverse range of career opportunities.
+
