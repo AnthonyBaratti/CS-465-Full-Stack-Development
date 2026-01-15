@@ -56,14 +56,6 @@ This screen shot shows the Admin dashboard after an admin user is authenticated 
 ![Admin dashboard](Portfolio_Screenshots/admin_dashboard.png)<br>
 ![Admin_buttons](Portfolio_Screenshots/admin_dashboard_buttons.png)
 
-#### Admin Add Trip
-This screen shot shows the admin add trip form, accessed through the Add Trip button.
-![Add Trip Form](Portfolio_Screenshots/admin_add_trip_form.png)
-
-#### Admin Add Trip Evidence
-This screen shot shows that the trip was added to the admin page.
-![Add Trip Evidence](Portfolio_Screenshots/admin_added_trip.png)
-
 #### Admin Edit Trip
 This screen shot shows the admin edit trip form, accessed through the edit button on the trip card.
 ![Admin Edit Trip Form](Portfolio_Screenshots/admin_edit_form.png)
@@ -71,6 +63,14 @@ This screen shot shows the admin edit trip form, accessed through the edit butto
 #### Admin Edit Trip Evidence
 This screen shot shows the edited trip card (updated after trip form is saved).
 ![Edit Trip Evidence](Portfolio_Screenshots/admin_edited_trip.png)
+
+#### Admin Add Trip
+This screen shot shows the admin add trip form, accessed through the Add Trip button.
+![Add Trip Form](Portfolio_Screenshots/admin_add_trip_form.png)
+
+#### Admin Add Trip Evidence
+This screen shot shows that the trip was added to the admin page.
+![Add Trip Evidence](Portfolio_Screenshots/admin_added_trip.png)
 
 ### User Interface Frontend
 
