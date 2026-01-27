@@ -91,5 +91,5 @@ This screenshot shows that a new trip was added from the admin backend Trip Form
 
 
 
-<br><br.
+<br><br>
 [Back to Contents](#table-of-contents)
